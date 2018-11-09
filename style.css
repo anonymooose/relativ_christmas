@@ -13,3 +13,19 @@ html, body { width: 100%; height: 100% }
   mix-blend-mode: multiply;
   opacity: 1;
 }
+
+.red{
+  background-color: red ;
+}
+
+.blue{
+  background-color: blue ;
+}
+
+.orange{
+  background-color: orange ;
+}
+
+.purple {
+  background-color: purple ;
+}
