@@ -5,4 +5,7 @@ $(function()
     video.setAttribute('muted', '');
     video.setAttribute('autoplay', '');
     video.setAttribute('playsinline', '');
+
+    var filter = document.createElement('div');
+    document.body.appendChild(video);
 });
