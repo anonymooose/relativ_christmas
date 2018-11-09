@@ -8,5 +8,9 @@ $(function()
 
     var filter = document.createElement('div');
     document.body.appendChild(video);
+    document.body.appendChild(filter);
+
+    $(filter).addClass('filter');
+    $(filter).addClass('red');
 
 });
