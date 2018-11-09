@@ -30,4 +30,14 @@ $(function()
         }
       }
 
+    var constraints = { audio: false, video: { facingMode: "environment" } };
+    navigator.getUserMedia(constraints, function(stream){
+      video.srcObject = stream;
+
+      video.onloadedmetadata = function(e){
+        video.play();
+      }
+    },
+      function(e){log(e.message);
+    });
 });
