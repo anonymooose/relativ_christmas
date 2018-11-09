@@ -11,12 +11,12 @@ $(function()
     document.body.appendChild(filter);
 
     $(filter).addClass('filter');
-    $(filter).addClass('red');
+    $(filter).addClass('yellow');
 
     filter.onclick = function()
       {
-        if($(filter).hasClass("red")){
-          $(filter).removeClass("red");
+        if($(filter).hasClass("yellow")){
+          $(filter).removeClass("yellow");
           $(filter).addClass("blue");
         }else if($(filter).hasClass("blue")){
           $(filter).removeClass("blue");
@@ -26,7 +26,7 @@ $(function()
           $(filter).addClass("purple");
         } else{
           $(filter).removeClass("purple");
-          $(filter).addClass("red");
+          $(filter).addClass("yellow");
         }
       }
 
