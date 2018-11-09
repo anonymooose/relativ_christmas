@@ -17,9 +17,9 @@ $(function()
       {
         if($(filter).hasClass("yellow")){
           $(filter).removeClass("yellow");
-          $(filter).addClass("blue");
-        }else if($(filter).hasClass("blue")){
-          $(filter).removeClass("blue");
+          $(filter).addClass("grey");
+        }else if($(filter).hasClass("grey")){
+          $(filter).removeClass("grey");
           $(filter).addClass("orange");
         }else if($(filter).hasClass("orange")){
           $(filter).removeClass("orange");
