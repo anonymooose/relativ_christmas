@@ -8,4 +8,5 @@ $(function()
 
     var filter = document.createElement('div');
     document.body.appendChild(video);
+
 });
