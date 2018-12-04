@@ -49,7 +49,7 @@ $(function()
       }
     }
 
-    navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+    navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: "environment"} })
     .then(function(stream) {
       var video = document.querySelector('video');
 
