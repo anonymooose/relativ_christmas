@@ -30,7 +30,20 @@ $(function()
         }
       }
 
-    var constraints = { audio: false, video: { facingMode: "environment" } };
+
+      var constraints = { audio: false, video: { width: 1280, height: 720 } };
+
+      navigator.mediaDevices.getUserMedia(constraints)
+      .then(function(mediaStream) {
+        var video = document.querySelector('video');
+        video.srcObject = mediaStream;
+        video.onloadedmetadata = function(e) {
+          video.play();
+        };
+      })
+      .catch(function(err) { console.log(err.name + ": " + err.message); });
+
+  /*  var constraints = { audio: false, video: { facingMode: "environment" } };
     navigator.getUserMedia(constraints, function(stream){
       video.srcObject = stream;
 
@@ -39,5 +52,5 @@ $(function()
       }
     },
       function(e){log(e.message);
-    });
+    });*/
 });
