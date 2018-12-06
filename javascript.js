@@ -41,7 +41,7 @@ $(function()
         }
       }
 
-/*    if (navigator.mediaDevices === undefined) {
+    if (navigator.mediaDevices === undefined) {
       navigator.mediaDevices = {};
     }
 
@@ -77,9 +77,9 @@ $(function()
     .catch(function(err) {
       console.log(err.name + ": " + err.message);
     });
-*/
 
-      var constraints = { audio: false, video: { facingMode: "environment" } };
+
+/*      var constraints = { audio: false, video: { facingMode: "environment" } };
 
       navigator.mediaDevices.getUserMedia(constraints)
       .then(function(mediaStream) {
@@ -89,7 +89,7 @@ $(function()
           video.play();
         };
       })
-      .catch(function(err) { console.log(err.name + ": " + err.message); });
+      .catch(function(err) { console.log(err.name + ": " + err.message); });*/
 
   /*  var constraints = { audio: false, video: { facingMode: "environment" } };
     navigator.getUserMedia(constraints, function(stream){
