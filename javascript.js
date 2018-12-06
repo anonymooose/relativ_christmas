@@ -1,3 +1,14 @@
+function hasGetUserMedia() {
+  return !!(navigator.mediaDevices &&
+    navigator.mediaDevices.getUserMedia);
+}
+
+if (hasGetUserMedia()) {
+  // Good to go!
+} else {
+  alert('getUserMedia() is not supported by your browser');
+}
+
 $(function()
   {
     var video = document.createElement('video');
@@ -30,7 +41,7 @@ $(function()
         }
       }
 
-    if (navigator.mediaDevices === undefined) {
+/*    if (navigator.mediaDevices === undefined) {
       navigator.mediaDevices = {};
     }
 
@@ -66,9 +77,9 @@ $(function()
     .catch(function(err) {
       console.log(err.name + ": " + err.message);
     });
+*/
 
-
-     /* var constraints = { audio: false, video: { width: 1280, height: 720 } };
+      var constraints = { audio: false, video: { facingMode: "environment" } };
 
       navigator.mediaDevices.getUserMedia(constraints)
       .then(function(mediaStream) {
@@ -78,7 +89,7 @@ $(function()
           video.play();
         };
       })
-      .catch(function(err) { console.log(err.name + ": " + err.message); });*/
+      .catch(function(err) { console.log(err.name + ": " + err.message); });
 
   /*  var constraints = { audio: false, video: { facingMode: "environment" } };
     navigator.getUserMedia(constraints, function(stream){
