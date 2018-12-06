@@ -1,4 +1,4 @@
-function hasGetUserMedia() {
+/*function hasGetUserMedia() {
   return !!(navigator.mediaDevices &&
     navigator.mediaDevices.getUserMedia);
 }
@@ -7,7 +7,7 @@ if (hasGetUserMedia()) {
   // Good to go!
 } else {
   alert('getUserMedia() is not supported by your browser');
-}
+}*/
 
 $(function()
   {
@@ -41,45 +41,45 @@ $(function()
         }
       }
 
-    // if (navigator.mediaDevices === undefined) {
-    //   navigator.mediaDevices = {};
-    // }
+    if (navigator.mediaDevices === undefined) {
+      navigator.mediaDevices = {};
+    }
 
-    // if (navigator.mediaDevices.getUserMedia === undefined) {
-    //   navigator.mediaDevices.getUserMedia = function(constraints) {
+    if (navigator.mediaDevices.getUserMedia === undefined) {
+      navigator.mediaDevices.getUserMedia = function(constraints) {
 
-    //     var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-    //     if (!getUserMedia) {
-    //       return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-    //     }
+        if (!getUserMedia) {
+          return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+        }
 
-    //     return new Promise(function(resolve, reject) {
-    //       getUserMedia.call(navigator, constraints, resolve, reject);
-    //     });
-    //   }
-    // }
+        return new Promise(function(resolve, reject) {
+          getUserMedia.call(navigator, constraints, resolve, reject);
+        });
+      }
+    }
 
-    // navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: "environment"} })
-    // .then(function(stream) {
-    //   var video = document.querySelector('video');
+    navigator.mediaDevices.getUserMedia({ audio: false, video: { facingMode: "environment"} })
+    .then(function(stream) {
+      var video = document.querySelector('video');
 
-    //   if ("srcObject" in video) {
-    //     video.srcObject = stream;
-    //   } else {
+      if ("srcObject" in video) {
+        video.srcObject = stream;
+      } else {
 
-    //     video.src = window.URL.createObjectURL(stream);
-    //   }
-    //   video.onloadedmetadata = function(e) {
-    //     video.play();
-    //   };
-    // })
-    // .catch(function(err) {
-    //   console.log(err.name + ": " + err.message);
-    // });
+        video.src = window.URL.createObjectURL(stream);
+      }
+      video.onloadedmetadata = function(e) {
+        video.play();
+      };
+    })
+    .catch(function(err) {
+      console.log(err.name + ": " + err.message);
+    });
 
 
-      var constraints = { audio: false, video: { facingMode: "environment" } };
+/*      var constraints = { audio: false, video: { facingMode: "environment" } };
 
       navigator.mediaDevices.getUserMedia(constraints)
       .then(function(mediaStream) {
@@ -89,7 +89,7 @@ $(function()
           video.play();
         };
       })
-      .catch(function(err) { console.log(err.name + ": " + err.message); });
+      .catch(function(err) { console.log(err.name + ": " + err.message); });*/
 
   /*  var constraints = { audio: false, video: { facingMode: "environment" } };
     navigator.getUserMedia(constraints, function(stream){
