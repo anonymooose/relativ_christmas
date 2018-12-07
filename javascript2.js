@@ -5,25 +5,25 @@ $(function()
 
     var filterimg = document.createElement('div');
     document.body.appendChild(img);
-    document.body.appendChild(filter);
+    document.body.appendChild(filterimg);
 
-    $(filter).addClass('filter');
-    $(filter).addClass('yellow');
+    $(filterimg).addClass('filter');
+    $(filterimg).addClass('yellow');
 
-    filter.onclick = function()
+    filterimg.onclick = function()
       {
-        if($(filter).hasClass("yellow")){
-          $(filter).removeClass("yellow");
-          $(filter).addClass("grey");
-        }else if($(filter).hasClass("grey")){
-          $(filter).removeClass("grey");
-          $(filter).addClass("orange");
-        }else if($(filter).hasClass("orange")){
-          $(filter).removeClass("orange");
-          $(filter).addClass("purple");
+        if($(filterimg).hasClass("yellow")){
+          $(filterimg).removeClass("yellow");
+          $(filterimg).addClass("grey");
+        }else if($(filterimg).hasClass("grey")){
+          $(filterimg).removeClass("grey");
+          $(filterimg).addClass("orange");
+        }else if($(filterimg).hasClass("orange")){
+          $(filterimg).removeClass("orange");
+          $(filterimg).addClass("purple");
         } else{
-          $(filter).removeClass("purple");
-          $(filter).addClass("yellow");
+          $(filterimg).removeClass("purple");
+          $(filterimg).addClass("yellow");
         }
       }
 });
