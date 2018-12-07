@@ -7,7 +7,7 @@ $(function()
     document.body.appendChild(img);
     document.body.appendChild(filterimg);
 
-    $(filterimg).addClass('filter');
+    $(filterimg).addClass('filterimg');
     $(filterimg).addClass('yellow');
 
     filterimg.onclick = function()
