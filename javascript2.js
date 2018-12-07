@@ -3,7 +3,7 @@ $(function()
     var img = document.createElement('img');
     img.setAttribute('src', 'relativ_holidaycard_2018_v1-01.png')
 
-    var filter = document.createElement('div');
+    var filterimg = document.createElement('div');
     document.body.appendChild(img);
     document.body.appendChild(filter);
 

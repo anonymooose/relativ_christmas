@@ -11,17 +11,24 @@ h1 {
 }
 
 img {
-  height: 100vh;
+  height: 100%;
   position: absolute;
 }
 
-.filter{
-  width: 100vh;
-  height: 100vh;
+.filterimg{
+  width: 100%;
+  height: 100%;
   position: absolute;
   mix-blend-mode: multiply;
   opacity: 1;
-  padding: 0 0 0 0;
+}
+
+.filter{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 1;
 }
 
 .yellow{
