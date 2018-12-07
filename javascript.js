@@ -23,12 +23,12 @@ $(function()
     document.body.appendChild(filter);
 
     $(filter).addClass('filter');
-    $(filter).addClass('yellow');
+    $(filter).addClass('none');
 
     filter.onclick = function()
       {
-        if($(filter).hasClass("yellow")){
-          $(filter).removeClass("yellow");
+        if($(filter).hasClass("none")){
+          $(filter).removeClass("none");
           $(filter).addClass("grey");
         }else if($(filter).hasClass("grey")){
           $(filter).removeClass("grey");
@@ -38,7 +38,7 @@ $(function()
           $(filter).addClass("purple");
         } else{
           $(filter).removeClass("purple");
-          $(filter).addClass("yellow");
+          $(filter).addClass("none");
         }
       }
 

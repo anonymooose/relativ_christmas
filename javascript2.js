@@ -8,12 +8,12 @@ $(function()
     document.body.appendChild(filterimg);
 
     $(filterimg).addClass('filterimg');
-    $(filterimg).addClass('yellow');
+    $(filterimg).addClass('none');
 
     filterimg.onclick = function()
       {
-        if($(filterimg).hasClass("yellow")){
-          $(filterimg).removeClass("yellow");
+        if($(filterimg).hasClass("none")){
+          $(filterimg).removeClass("none");
           $(filterimg).addClass("grey");
         }else if($(filterimg).hasClass("grey")){
           $(filterimg).removeClass("grey");
@@ -23,7 +23,7 @@ $(function()
           $(filterimg).addClass("purple");
         } else{
           $(filterimg).removeClass("purple");
-          $(filterimg).addClass("yellow");
+          $(filterimg).addClass("none");
         }
       }
 });
