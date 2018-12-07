@@ -7,7 +7,7 @@ if (hasGetUserMedia()) {
   // Good to go!
 } else {
   alert('Camera function is not supported on this browser, you will be redirected to a simulation page.');
-  window.location.replace("http://stackoverflow.com");
+  document.location.href = '/secondary.html'
 }
 
 $(function()
