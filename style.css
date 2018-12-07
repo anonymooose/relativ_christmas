@@ -21,6 +21,7 @@ img {
   position: absolute;
   mix-blend-mode: multiply;
   opacity: 1;
+  padding: 0 0 0 0;
 }
 
 .yellow{
