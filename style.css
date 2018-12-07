@@ -18,8 +18,7 @@ img {
 }
 
 .filterimg{
-  width: 130vh;
-  height: 100vh;
+  background-size: cover;
   position: absolute;
   mix-blend-mode: multiply;
   opacity: 1;
