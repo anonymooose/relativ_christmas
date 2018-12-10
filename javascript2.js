@@ -1,7 +1,7 @@
 $(function()
   {
     var img = document.createElement('img');
-    img.setAttribute('src', 'relativ_holidaycard_2018.png')
+    img.setAttribute('src', 'relativ_holidaycard_2018_v1-01.png')
     img.setAttribute('class', 'holidaycard')
 
     var filterimg = document.createElement('div');
