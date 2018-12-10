@@ -30,14 +30,8 @@ $(function()
         if($(filter).hasClass("none")){
           $(filter).removeClass("none");
           $(filter).addClass("red");
-        }else if($(filter).hasClass("red")){
+        }else{
           $(filter).removeClass("red");
-          $(filter).addClass("orange");
-        }else if($(filter).hasClass("orange")){
-          $(filter).removeClass("orange");
-          $(filter).addClass("purple");
-        } else{
-          $(filter).removeClass("purple");
           $(filter).addClass("none");
         }
       }
