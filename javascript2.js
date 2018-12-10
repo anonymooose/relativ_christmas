@@ -15,9 +15,9 @@ $(function()
       {
         if($(filterimg).hasClass("none")){
           $(filterimg).removeClass("none");
-          $(filterimg).addClass("grey");
-        }else if($(filterimg).hasClass("grey")){
-          $(filterimg).removeClass("grey");
+          $(filterimg).addClass("red");
+        }else if($(filterimg).hasClass("red")){
+          $(filterimg).removeClass("red");
           $(filterimg).addClass("orange");
         }else if($(filterimg).hasClass("orange")){
           $(filterimg).removeClass("orange");
