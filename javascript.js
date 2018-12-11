@@ -6,7 +6,7 @@ function hasGetUserMedia() {
 if (hasGetUserMedia()) {
   // Good to go!
 } else {
-  alert('Camera function is not supported on this browser, you will be redirected to a simulation page.');
+  alert('HAPPY HOLIDAYS! Sorry but The camera function is not supported on this browser, you will be redirected to a simulation page!');
   document.location.href = '/secondary.html'
 }
 
