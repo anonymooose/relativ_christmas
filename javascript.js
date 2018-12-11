@@ -29,9 +29,9 @@ $(function()
       {
         if($(filter).hasClass("none")){
           $(filter).removeClass("none");
-          $(filter).addClass("red");
+          $(filter).addClass("yellow");
         }else{
-          $(filter).removeClass("red");
+          $(filter).removeClass("yellow");
           $(filter).addClass("none");
         }
       }
